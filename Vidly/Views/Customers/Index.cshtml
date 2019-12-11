@@ -34,6 +34,7 @@
 @section scripts
 {
     <script>
+        /* ********************** Uses DataTable jQuery PLUGIN ********************************************************* */
         $(document).ready(function () {
             var table = $("#customers").DataTable({
                 ajax: {
@@ -62,7 +63,8 @@
 
             $("#customers").on("click", ".js-delete", function () {
                 var button = $(this);
-
+                
+                /* ********************** Uses Bootbox jQuery PLUGIN ********************************************************* */
                 bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
                     if (result) {
                         $.ajax({
